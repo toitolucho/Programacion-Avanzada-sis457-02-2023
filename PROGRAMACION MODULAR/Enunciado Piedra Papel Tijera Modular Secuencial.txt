@@ -1,0 +1,29 @@
+Considerando el contexto del juego de Piedra, Papel o tijera, implementa las siguientes funcionalidades en c++
+Considera que la aplicacion sera para consola, y la seleccion de un jugador se puede representar con algun caracter, cadena o numero, por ejemplo
+Jugada   Representacion  Codigo
+Piedra : () 				1
+Papel  : []					2
+Tijera : 8<					3
+
+- Diseña una funcion que retorne el los siguientes posibles valores al evaluar 
+  dos parametros que representan las opciones seleccionadas de ambos jugadores
+1 -> Si el jugador 1 gano la partida
+0 -> Si Hubo empate
+-1-> Si el jugador 1 perdio la partida.
+Ejemplo :
+int resp = evaluar(1, 3);
+
+- Diseña un modulo que permita imprimir la partida a partir de 
+las opciones seleccionadas.
+
+imprimir (1,3)
+  ()          8<
+Piedra  Vs  Tijera
+  1           3
+  _
+ ( )		 ( )
+(   )   vs  ( - ) /
+ ( )         ( )  \
+  -
+  
+Diseña una modulo que permita identificar quien fue el que gano en funcion a la respuesta obtenida en la llamada la funcion evaluar()

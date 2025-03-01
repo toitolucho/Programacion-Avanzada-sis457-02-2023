@@ -1,0 +1,71 @@
+Carrera de Autos
+
+Contexto:
+Se simula una carrera entre dos autos. Cada auto tiene un nivel de combustible y una velocidad máxima. Los autos avanzan por turnos y consumen combustible a medida que aceleran. El primero en llegar a la meta gana.
+Clases a Implementar
+
+    Clase Auto
+	
+        Atributos:
+            -velocidad: Entero, representa la velocidad actual del auto.
+            -combustible: Entero, cantidad de combustible disponible.
+            +posicion: Entero, distancia recorrida en la pista.
+
+        Métodos:
+            Acelerar(): Incrementa la velocidad en una unidad si hay suficiente combustible 
+            Avanzar(): Modifica la posición según la velocidad y disminuye combustible (Asuma que se quita 10 unidades de combbustible por cada cuadro que se avanza)
+            RecargarCombustible(int cantidad): Añade combustible al auto.
+            Métodos de acceso y mutación para cada atributo.zoo
+            Dos constructores: uno por defecto y otro con parámetros.
+
+	
+    Clase Visualizador
+
+        Atributos:
+            Auto auto1, auto2: Los autos en carrera.
+			
+        Métodos:
+            MostrarEstado(): Muestra la posición y el nivel de combustible de cada auto.
+			Imrime el combustible de forma visual
+				
+			
+			
+            AnunciarGanador(): Informa qué auto ganó.
+			VisualizarCarrera() : Representa de forma visual el estado de la competencia.
+	
+    Clase Carrera
+
+        Atributos:
+            Auto auto1, auto2: Los autos en competencia.
+            longitudCarrera: Entero, distancia total de la carrera.
+			turno = 1,2
+			Visualizador visualizador: se encarga de mostrar la carrera
+        Métodos:
+            IniciarCarrera(): Ejecuta la lógica de la carrera por turnos hasta que un auto llegue a la meta.
+			Considere los siguientes controles para considerar las acciones de cada auto:
+			W -> si se introduce ese caracter el auto en turno aceleran
+			D -> si se introduce ese caracter el auto avanza
+			
+            DeterminarGanador(): Evalúa qué auto llegó primero y devuelve su número
+			1-> para el primer auto, 2->para el Segundo, 0->si aun no hay ganador
+			
+
+
+===========================================================================
+|     |     |  #  |     |     |     |     |     |     |     |     |     |M|
+|     |     | O-O |     |     |     |     |     |     |     |     |     |E|
+---------------------------------------------------------------------------
+|     |     |     |     |     |     |  #  |     |     |     |     |     |T|
+|     |     |     |     |     |     | O-O |     |     |     |     |     |A|
+===========================================================================
+	1    2     3     
+	
+	turno = 1
+	
+	
+	auto 1
+	Velocidad = 3
+	posicion = 1
+	
+	W -> acelerar
+	D -> Avanzar
